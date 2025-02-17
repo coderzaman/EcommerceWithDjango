@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title_block %}Sign In{% endblock title_block %}
+
+{% block body_block %}
+        <div class="row">
+            <div class="col-4 m-auto mt-2 p-3 border border-2 rounded">
+                <h2 class="text-center">Login</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <div class="d-flex justify-content-center">
+                        <input type="submit" value="Sign In" class="btn btn-dark btn-sm">
+                    </div>
+                    <p class="d-block text-center mt-2 have_account">Don't Have an Account?<a href="{% url "login_app:signup" %}"> Click Here</a></p>
+                </form>
+            </div>
+        </div>
+{% endblock body_block %}
