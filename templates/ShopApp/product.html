@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title_block %}{{object.name}}{% endblock title_block %}
+{% block body_block %}
+    <div class="container">
+        <div class="row shadow shadow-sm mt-3">
+            <div class="col-md-6 col-lg-6 col-sm-12  ps-0">
+                <div class="image-section">
+                    <img src="/media/{{object.main_image}}" class="img-fluid p-3 border border-1 m-0" style="height: auto; width: 100%;" alt="">
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-6 col-sm-12">
+                <div class="detail_section">
+                    <h5>{{object.name}}</h5>
+                    <p>&#2547;{{object.price}} <span class="text-danger">&nbsp;&nbsp;<strike>&#2547;{{object.old_price}}</strike></span></p>
+                    <p>{{object.preview_text|linebreaks }}</p>
+                </div>
+                <a href="#" class="btn btn-outline-primary">ADD TO CART</a>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+                <p class="text-justify">{{object.detail_text |linebreaks}}</p>
+            </div>
+        </div>
+    </div>
+{% endblock body_block %}

@@ -12,7 +12,7 @@
           <div class="card" style="height: 330px;">
             <img src="/media/{{ product.main_image }}" class="card-img-top m-0 p-0" alt="..." height="220 px" width="100%" />
             <div class="card-body">
-              <h6 class="card-title"><a href="#" class="text text-decoration-none">{{ product.name }}</a></h6>
+              <h6 class="card-title"><a href="{% url 'shop_app:product' pk=product.pk %}" class="text text-decoration-none">{{ product.name }}</a></h6>
               <p class="card-text m-0">
                 &#2547;{{ product.price }}&nbsp;&nbsp; <span class="text-danger old_price"><strike>&#2547;{{ product.old_price }}</strike></span>
               </p>
