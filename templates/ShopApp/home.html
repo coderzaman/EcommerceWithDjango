@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title_block %}
+  Home
+{% endblock %}
+
+{% block body_block %}
+  <div class="container">
+    <div class="row p-4 border border-1 rounded rounded-1 mb-3">
+      <h3 class=" mb-3 fs-4">Feature Products</h3>
+      {% for product in object_list %}
+        <div class="col-md-4 col-sm-12 col-lg-3">
+          <div class="card" style="height: 330px;">
+            <img src="/media/{{ product.main_image }}" class="card-img-top m-0 p-0" alt="..." height="220 px" width="100%" />
+            <div class="card-body">
+              <h6 class="card-title"><a href="#" class="text text-decoration-none">{{ product.name }}</a></h6>
+              <p class="card-text m-0">
+                &#2547;{{ product.price }}&nbsp;&nbsp; <span class="text-danger old_price"><strike>&#2547;{{ product.old_price }}</strike></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

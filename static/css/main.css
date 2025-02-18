@@ -7,3 +7,20 @@ h2{
 .have_account{
     font-size: 15px;
 }
+
+p{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.old_price{
+    color: red;
+}
+
+.logo{
+    font-family: "Monoton", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+}

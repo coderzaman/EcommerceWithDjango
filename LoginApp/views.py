@@ -43,7 +43,7 @@ def login_user(request):
             
             if user is not None:
                 login(request,user)
-                return HttpResponse("Successfully Login")
+                return redirect("shop_app:home")
             else:
                 return HttpResponse("Email and password not found")
     
@@ -53,7 +53,7 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     messages.warning(request, "Your are logged out")
-    return redirect("login_app:login")
+    return redirect("shop_app:home")
 
 @login_required
 def user_profile(request):
