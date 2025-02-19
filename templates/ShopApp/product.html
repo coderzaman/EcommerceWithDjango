@@ -16,7 +16,7 @@
                     <p>&#2547;{{object.price}} <span class="text-danger">&nbsp;&nbsp;<strike>&#2547;{{object.old_price}}</strike></span></p>
                     <p>{{object.preview_text|linebreaks }}</p>
                 </div>
-                <a href="#" class="btn btn-outline-primary">ADD TO CART</a>
+                <a href="{% url 'order_app:add' pk=object.pk %}" class="btn btn-outline-primary">ADD TO CART</a>
             </div>
 
         </div>
